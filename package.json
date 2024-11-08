@@ -1,0 +1,11 @@
+{
+  "name": "studioyosepra-inbox-server",
+  "version": "1.0.0",
+  "description": "Inbox app to manage contact messages from StudioYosepRA apps.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yosep Ryan Agusta",
+  "license": "MIT"
+}
