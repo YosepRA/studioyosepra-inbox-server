@@ -10,8 +10,10 @@
   "author": "Yosep Ryan Agusta",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "module-alias": "^2.2.3",
+    "mongoose": "^8.8.1",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
@@ -22,12 +24,15 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-path-alias": "^2.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "globals": "^15.12.0",
     "prettier": "^3.3.3"
   },
   "_moduleAliases": {
     "@Root": ".",
-    "@Features": "./src/features"
+    "@Features": "./src/features",
+    "@Data": "./src/data",
+    "@Database": "./src/database"
   }
 }

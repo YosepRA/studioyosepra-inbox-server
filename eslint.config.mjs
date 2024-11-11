@@ -31,6 +31,7 @@ export default [
       '@stylistic/js/semi': ['error', 'always'],
       'no-console': ['warn'],
       'import/extensions': ['error', 'always', { ignorePackages: true }],
+      'import/no-unresolved': 'off',
       'prettier/prettier': [
         'error',
         {
