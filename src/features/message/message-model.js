@@ -6,7 +6,7 @@ const messageModelSchema = new Schema({
   name: { type: String, required: true },
   email: { type: String, required: true },
   body: { type: String, required: true },
-  status: { type: String, enum: ['read', 'unread'] },
+  status: { type: String, enum: ['read', 'unread'], default: 'unread' },
   createdAt: { type: 'Date', default: Date.now },
 });
 

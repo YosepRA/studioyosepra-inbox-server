@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-async function mongoConnect(mongoUrl) {
+function mongoConnect(mongoUrl) {
   mongoose.connect(mongoUrl).catch((error) => {
     console.log('Database initial connection error.', error.message);
   });

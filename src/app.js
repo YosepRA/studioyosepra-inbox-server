@@ -4,7 +4,7 @@ require('module-alias/register');
 const express = require('express');
 const logger = require('morgan');
 
-const mongoConnect = require('@Database/mongoConnect.js');
+const mongoConnect = require('@Database/mongo-connect.js');
 const index = require('@Features/index/index.js');
 const message = require('@Features/message/index.js');
 

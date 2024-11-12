@@ -1,4 +1,4 @@
-const indexRouter = require('./indexRouter.js');
+const indexRouter = require('./index-router.js');
 
 module.exports = {
   router: indexRouter,

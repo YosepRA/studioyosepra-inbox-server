@@ -1,5 +1,5 @@
-const messageRouter = require('./messageRouter.js');
-const messageModel = require('./messageModel.js');
+const messageRouter = require('./message-router.js');
+const messageModel = require('./message-model.js');
 
 module.exports = {
   router: messageRouter,
