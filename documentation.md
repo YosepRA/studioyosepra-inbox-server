@@ -48,7 +48,7 @@ GET /message
 
 ### Query Parameters
 
-- `page`  
+- `page` _Required_  
   Type: `Number`  
   Default: 1  
   Current page number.
@@ -107,18 +107,31 @@ _No query parameters._
 
 Type: JSON
 
-- `name` **Required**  
-  Type: `String`  
-  Default: ''  
-  Sender's name.
-- `email  **Required**  
-Type: `String`  
-   Default: ''  
-   Sender's email address.
-- `body` **Required**  
-  Type: `String`  
-  Default: ''  
-  Sender text message.
+- `message`
+  - `name` **Required**  
+    Type: `String`  
+    Default: ''  
+    Sender's name.
+  - `email` **Required**  
+    Type: `String`  
+    Default: ''  
+    Sender's email address.
+  - `body` **Required**  
+    Type: `String`  
+    Default: ''  
+    Sender text message.
+
+Example:
+
+```js
+{
+  message: {
+    name: 'John Smith',
+    email: 'johnsmith@mail.com',
+    body: 'Hi there. I would like to discuss about a website for my bookstore business. Can I ask for an opportunity to discuss this further with you? Thank you.'
+  }
+},
+```
 
 ### Return
 
@@ -243,6 +256,60 @@ Deleted message ID.
   status: 'ok',
   data: {
     _id: '6576cd624bf996d403eb1c00',
+  },
+}
+```
+
+### Error Responses
+
+**No Data Found**
+
+Status code: 404
+
+```js
+{
+  status: 'error',
+  errorMessage: 'No message found with ID "x".'
+}
+```
+
+### **Change Message Read Status**
+
+Change message read status.
+
+### Endpoint
+
+```
+PUT /message/:id
+```
+
+### Path Parameters
+
+- `id`  
+  Type: String  
+  Default: ''  
+  Message ID.
+
+### Query Parameters
+
+_No parameters._
+
+### Return
+
+Update status and old message data.
+
+### Response Example
+
+```js
+{
+  status: 'ok',
+  data: {
+    _id: '6576cd624bf996d403eb1c00',
+    name: 'John Smith',
+    email: 'johnsmith@mail.com',
+    body: 'Hi there. I would like to discuss about a website for my bookstore business. Can I ask for an opportunity to discuss this further with you? Thank you.',
+    status: 'unread',
+    createdAt: '2024-11-08T01:39:46.543Z',
   },
 }
 ```

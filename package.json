@@ -10,30 +10,32 @@
   "author": "Yosep Ryan Agusta",
   "license": "MIT",
   "dependencies": {
-    "dotenv": "^16.4.5",
-    "express": "^4.21.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
     "module-alias": "^2.2.3",
-    "mongoose": "^8.8.1",
+    "mongoose": "^8.8.4",
+    "mongoose-paginate-v2": "^1.8.5",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.1.0",
-    "@eslint/js": "^9.14.0",
-    "@faker-js/faker": "^9.2.0",
-    "@stylistic/eslint-plugin-js": "^2.10.1",
+    "@eslint/eslintrc": "^3.2.0",
+    "@eslint/js": "^9.16.0",
+    "@faker-js/faker": "^9.3.0",
+    "@stylistic/eslint-plugin-js": "^2.12.0",
     "eslint": "^8.57.1",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-path-alias": "^2.1.0",
     "eslint-plugin-prettier": "^5.2.1",
-    "globals": "^15.12.0",
-    "prettier": "^3.3.3"
+    "globals": "^15.13.0",
+    "prettier": "^3.4.2"
   },
   "_moduleAliases": {
     "@Root": ".",
     "@Features": "./src/features",
     "@Data": "./src/data",
-    "@Database": "./src/database"
+    "@Database": "./src/database",
+    "@Utils": "./src/utils"
   }
 }

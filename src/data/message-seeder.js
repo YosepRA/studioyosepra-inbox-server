@@ -15,7 +15,6 @@ faker.seed(100);
 
 async function generateFakeMessages(amount) {
   const messages = [];
-  // const sixMonthsAgo = new Date(Date.now() - 6 * 30 * 24 * 60 * 60 * 1000);
 
   for (let i = 0; i < amount; i += 1) {
     const newMessage = {

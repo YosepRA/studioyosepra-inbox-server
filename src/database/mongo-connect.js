@@ -5,25 +5,25 @@ function mongoConnect(mongoUrl) {
     console.log('Database initial connection error.', error.message);
   });
 
-  const dbConnection = mongoose.connection;
+  const db = mongoose.connection;
 
-  dbConnection.on('open', () => {
+  db.on('open', () => {
     console.log('Database is open.');
   });
-  dbConnection.on('error', (error) => {
+  db.on('error', (error) => {
     console.log('Database connection error.', error.message);
   });
-  dbConnection.on('connected', () => {
-    console.log('Database is successfully connected.');
+  db.on('connected', () => {
+    console.log(`Connected to database '${db.name}'.`);
   });
-  dbConnection.on('disconnected', () => {
+  db.on('disconnected', () => {
     console.log('Database is disconnected.');
   });
-  dbConnection.on('close', () => {
+  db.on('close', () => {
     console.log('Database connection is closed.');
   });
 
-  return dbConnection;
+  return db;
 }
 
 module.exports = mongoConnect;
