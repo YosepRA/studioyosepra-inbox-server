@@ -44,9 +44,7 @@ resetAndGenerateFakeMessages(amountArg).then((messages) => {
   console.log(
     `Fake message generation successful. Generated ${amountArg} messages.`,
   );
-  console.log('Amount args:', amountArg);
   console.log('Messages length:', messages.length);
-  console.log(messages[0]);
 
   db.close();
 });

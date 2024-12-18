@@ -280,7 +280,7 @@ Change message read status.
 ### Endpoint
 
 ```
-PUT /message/:id
+PUT /message/:id/change-read-status
 ```
 
 ### Path Parameters

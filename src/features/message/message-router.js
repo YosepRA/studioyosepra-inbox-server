@@ -18,6 +18,6 @@ router.post('/', controller.create);
 
 router.delete('/:id', controller.delete);
 
-router.put('/:id', controller.changeReadStatus);
+router.put('/:id/change-read-status', controller.changeReadStatus);
 
 module.exports = router;

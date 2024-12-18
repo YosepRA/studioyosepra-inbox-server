@@ -3,6 +3,7 @@ require('module-alias/register');
 
 const express = require('express');
 const logger = require('morgan');
+const cors = require('cors');
 
 const mongoConnect = require('@Database/mongo-connect.js');
 const index = require('@Features/index/index.js');
@@ -20,6 +21,7 @@ mongoConnect(mongoUrl);
 
 /* ======================= Middlxewares ======================= */
 
+app.use(cors());
 app.use(logger('dev'));
 
 /* ======================= Routes ======================= */
